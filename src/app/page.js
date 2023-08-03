@@ -17,7 +17,7 @@ export default function Home() {
   }, [reFecth]);
   return (
     <main className="container">
-      <div className=" space-y-4">
+      <div className=" grid md:grid-cols-2 gap-4 space-y-4">
         {blogs.map((blog) => (
           <div
             key={blog._id}
