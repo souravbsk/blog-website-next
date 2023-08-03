@@ -1,7 +1,6 @@
 'use client'
 import React from "react";
 import Swal from "sweetalert2";
-
 const url = `https://api.imgbb.com/1/upload?key=${process.env.NEXT_PUBLIC_IMGBB_API}`;
 
 const AddBlog = () => {
@@ -11,7 +10,6 @@ const AddBlog = () => {
     const title = form.title.value;
     const description = form.description.value;
     const imageData = form.file.files[0];
-
     const formData = new FormData();
     formData.append("image",imageData);
     fetch(url,{
@@ -25,7 +23,6 @@ const AddBlog = () => {
         const newBlog = {
           title,description,blogImage: data?.data?.display_url,
         }
-
         fetch("https://blog-website-express.vercel.app/blogs",{
           method:"POST",
           headers:{
@@ -44,7 +41,6 @@ const AddBlog = () => {
             timer: 1500
           })
           form.reset()
-
          }
         })
       }
