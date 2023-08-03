@@ -19,7 +19,6 @@ const RemoveBtn = ({id,setReFetch,reFecth}) => {
         })
         .then(res => res.json())
         .then(data => {
-
           if(data.deletedCount > 0){
             setReFetch(!reFecth)
             Swal.fire(
