@@ -78,7 +78,7 @@ const EditBlog = ({params}) => {
         </div>
         <div className="form-control mt-6">
           <button className="btn hover:text-[#1E293B] text-white bg-[#1E293B]">
-            Add Blog
+            Update Blog
           </button>
         </div>
       </form>
